@@ -1,7 +1,7 @@
 pipeline {
     agent any
     options {
-        ansiColor('xterm')
+        ansiColor('vga')
     }
 
     stages {
