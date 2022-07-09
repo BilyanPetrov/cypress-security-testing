@@ -5,7 +5,7 @@ describe('sql injection attack', () => {
         cy.visit('http://localhost:3000')
     })
 
-    it('should not display sensitive information when email input form is SQL injected', () => {
+    it('should not display sensitive information when login form is SQL injected', () => {
         // Navigate to login form
         cy.contains('Вход')
             .click({ force: true })

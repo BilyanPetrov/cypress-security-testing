@@ -7,7 +7,6 @@ pipeline {
     stages {
         stage('Checkout code') {
             steps {
-                bat "whoami"
                 echo 'Source Code Management...'
                 checkout scm
             }
