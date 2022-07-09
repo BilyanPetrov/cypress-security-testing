@@ -1,5 +1,10 @@
 pipeline {
     agent {
+        docker {
+            image 'node:14'
+        }
+    }
+    node {
         docker.image('node:14').withRun('-p 3000:3000') 
     }
 
