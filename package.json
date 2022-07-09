@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:run": "cypress run --headed --browser chrome"
+    "cy:run": "SET NO_COLOR=1 & cypress run --headed --browser chrome"
   },
   "author": "bilyanp",
   "license": "ISC",
