@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker.image('node:14.20-alpine').withRun('-p 3000:3000')
+        docker.image('node:14').withRun('-p 3000:3000') 
     }
 
     options {
