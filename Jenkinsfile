@@ -4,9 +4,6 @@ pipeline {
             image 'node:14'
         }
     }
-    node {
-        docker.image('node:14').withRun('-p 3000:3000') 
-    }
 
     options {
         ansiColor('xterm')
@@ -36,4 +33,8 @@ pipeline {
             }
         }
     }
+}
+
+node {
+        docker.image('node:14').withRun('-p 3000:3000') 
 }
