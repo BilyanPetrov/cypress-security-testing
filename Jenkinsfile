@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    agent {
+        docker.image('node:14.20-alpine').withRun('-p 3000:3000')
+    }
+    
     options {
         ansiColor('xterm')
     }
