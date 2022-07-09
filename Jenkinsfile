@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:14'
-        }
-    }
-
+    agent any
     options {
         ansiColor('xterm')
     }
@@ -21,20 +16,16 @@ pipeline {
             steps {
                 echo "Building on: ${WORKSPACE}"
                 echo 'Installing dependencies...'
-                sh "cd ${WORKSPACE}"
-                sh "npm install"
+                bat "cd ${WORKSPACE}"
+                bat "npm install"
             }
         }
 
         stage('Run automated security tests') {
             steps {
                 echo 'Running automated security tests...'
-                sh "npm run cy:run"
+                bat "npm run cy:run"
             }
         }
     }
-}
-
-node {
-        docker.image('node:14').withRun('-p 3000:3000') 
 }
