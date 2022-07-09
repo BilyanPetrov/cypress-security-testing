@@ -11,8 +11,9 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
+                echo "Building on: ${WORKSPACE}"
                 echo 'Installing dependencies...'
-                bat "cd ${WORKSPACE}/cypress-automated-security"
+                bat "cd ${WORKSPACE}"
                 bat "npm install"
             }
         }
