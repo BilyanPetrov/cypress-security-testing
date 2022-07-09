@@ -49,7 +49,7 @@ describe('xss injection attack', () => {
             })
     })
 
-    it.only('register form is not vulnerable to XSS attacks', () => {
+    it('register form is not vulnerable to XSS attacks', () => {
         cy.log('Navigating to register form.')
         cy.visit('http://localhost:3000/register');
 

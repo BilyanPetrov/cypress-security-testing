@@ -2,6 +2,7 @@
     "Explicit conversion from data type int to image is not allowed.",
     "The sum or average aggregate operation",
     "Microsoft OLE DB Provider for ODBC Drivers error",
+    "successful MongoDB injection",
     "division by 0",
     "Invalid expression"
 ]
